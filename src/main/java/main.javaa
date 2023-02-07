@@ -1,0 +1,15 @@
+import java.sql.*;
+
+public class main {
+    public static void main(String[] args) throws SQLException {
+        Connection connection = DriverManager.getConnection(
+                "jdbc:mysql://localhost:5432/Connection", "zarina", "masha65bu");
+
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery("SELECT * FROM table_name");
+
+        while (resultSet.next()) {
+            System.out.println(resultSet.getString(1) + " " + resultSet.getString(2));
+        }
+    }
+}
