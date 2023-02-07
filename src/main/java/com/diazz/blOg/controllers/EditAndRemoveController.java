@@ -17,4 +17,13 @@ import java.util.Optional;
 public class EditAndRemoveController {
     @Autowired
     private PostRepository PostRepository;
+    @PostMapping("/blog/{id}/edit")
+    public String blogPostUpdate(@PathVariable(value = "id") long id, @RequestParam String title, @RequestParam String anons, @RequestParam String full_text, Model model) {
+        Post post = PostRepository.findById(id).orElseThrow();
+        post.setTitle(title);
+        post.setAnons(anons);
+        post.setFull_text(full_text);
+        PostRepository.save(post);
+        return "redirect:/blog";
+    }
 }
