@@ -17,5 +17,16 @@ public class DetailsController {
     @Autowired
     private PostRepository PostRepository;
 
+    @GetMapping("/blog/{id}")
+    public String blogDetails(@PathVariable(value = "id") long id, Model model) {
+        if (!PostRepository.existsById(id)) {
+            return "redirect:/blog";
+        }
+
+        Optional<Post> post = PostRepository.findById(id);
+        post.ifPresent(p -> model.addAttribute("post", p));
+        return "blog-details";
+
+    }
 
 }
