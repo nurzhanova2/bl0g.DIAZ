@@ -32,4 +32,14 @@ public class EditAndRemoveController {
         PostRepository.delete(post);
         return "redirect:/blog";
     }
+    @GetMapping("/blog/{id}/edit")
+    public String blogEdit(@PathVariable(value = "id") long id, Model model) {
+        if (!PostRepository.existsById(id)) {
+            return "redirect:/blog";
+        }
+
+        Optional<Post> post = PostRepository.findById(id);
+        post.ifPresent(p -> model.addAttribute("post", p));
+        return "blog-edit";
+    }
 }
