@@ -22,9 +22,9 @@ public class MainController {
         return "home";
     }
 
-    /*@GetMapping("/about")
+    @GetMapping("/about")
     public String about(Model model) {
         model.addAttribute("title", "About us page");
         return "about";
-    }*/
+    }
 }
