@@ -16,4 +16,15 @@ import java.util.Optional;
 public class AddController {
     @Autowired
     private PostRepository PostRepository;
+    @GetMapping("/blog/add")
+    public String blogAdd(Model model) {
+        return "blog-add";
+    }
+
+    @PostMapping("/blog/add")
+    public String blogPostAdd(@RequestParam String title, @RequestParam String anons, @RequestParam String full_text) {
+        Post post = new Post(title, anons, full_text);
+        PostRepository.save(post);
+        return "redirect:/blog";
+    }
 }
