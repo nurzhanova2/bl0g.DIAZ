@@ -26,4 +26,10 @@ public class EditAndRemoveController {
         PostRepository.save(post);
         return "redirect:/blog";
     }
+    @PostMapping("/blog/{id}/remove")
+    public String blogPostDelete(@PathVariable(value = "id") long id,Model model) {
+        Post post = PostRepository.findById(id).orElseThrow();
+        PostRepository.delete(post);
+        return "redirect:/blog";
+    }
 }
