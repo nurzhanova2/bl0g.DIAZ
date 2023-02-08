@@ -1,8 +1,5 @@
 package com.diazz.blOg.controllers;
 
-import com.diazz.blOg.models.Post;
-import com.diazz.blOg.repo.PostRepository;
-import com.diazz.blOg.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,4 +24,9 @@ public class BlogController {
         model.addAttribute("posts", posts);
         return "blog-main";
     }
+   // @GetMapping("/blog/add")
+  //  public String blogAdd(Model model){
+    //    return "blog-add";
+  //  }
+
 }
