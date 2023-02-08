@@ -1,7 +1,5 @@
 package com.diazz.blOg.models;
-
 import jakarta.persistence.*;
-
 import java.util.List;
 import java.util.ArrayList;
 
@@ -23,6 +21,7 @@ public class Post {
 
     @Column(name = "views")
     private int views;
+
     public Post( String title, String anons, String full_text, int views) {
         this.title = title;
         this.anons = anons;
@@ -80,4 +79,5 @@ public class Post {
         this.anons = anons;
         this.full_text = full_text;
     }
+
 }
