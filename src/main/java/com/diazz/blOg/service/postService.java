@@ -1,4 +1,4 @@
 package com.diazz.blOg.service;
 
-public interface postSevice {
+public interface postService {
 }
