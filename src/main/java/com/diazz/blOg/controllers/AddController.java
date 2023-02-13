@@ -19,13 +19,22 @@ public class AddController {
 
     @GetMapping("/blog/add")
     public String blogAdd(Model model) {
+        try {
+        } catch (Exception e) {
+            //
+        }
         return "blog-add";
     }
 
     @PostMapping("/blog/add")
     public String blogPostAdd(@RequestParam String title, @RequestParam String anons, @RequestParam String full_text) {
-        Post post = new Post(title, anons, full_text);
-        PostRepository.save(post);
+        try {
+            Post post = new Post(title, anons, full_text);
+            PostRepository.save(post);
+        } catch (Exception e) {
+            //
+
+        }
         return "redirect:/blog";
     }
 }
