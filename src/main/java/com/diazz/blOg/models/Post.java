@@ -1,5 +1,18 @@
 package com.diazz.blOg.models;
 import jakarta.persistence.*;
+import org.apache.el.parser.ParseException;
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.document.Field;
+import org.apache.lucene.document.TextField;
+import org.apache.lucene.index.*;
+import org.apache.lucene.search.IndexSearcher;
+import org.apache.lucene.store.Directory;
+import org.apache.lucene.store.FSDirectory;
+
+import javax.swing.text.Document;
+import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -16,12 +29,12 @@ public class Post {
     private String anons;
 
     @Column(name = "full_text")
-    private String  full_text;
+    private String full_text;
 
     @Column(name = "views")
     private int views;
 
-    public Post( String title, String anons, String full_text, int views) {
+    public Post(String title, String anons, String full_text, int views) {
         this.title = title;
         this.anons = anons;
         this.full_text = full_text;

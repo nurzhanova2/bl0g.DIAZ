@@ -19,16 +19,19 @@ public class MainController {
 
     @GetMapping("/")
     public String home(Model model) {
-        model.addAttribute("title", "Main page");
+        try {
+            model.addAttribute("title", "Main page");
+        } catch (Exception e) {
+        }
         return "home";
     }
     @GetMapping("/about")
     public String about(Model model) {
-        model.addAttribute("title", "About us page");
+        try {
+            model.addAttribute("title", "About us page");
+        } catch (Exception e) {
+        }
         return "about";
     }
 
-
 }
-
-
