@@ -1,7 +1,5 @@
 package com.diazz.blOg.models;
-
 import jakarta.persistence.*;
-
 @Entity
 @Table(name = "post")
 public class Post {
