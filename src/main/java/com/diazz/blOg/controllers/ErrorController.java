@@ -30,4 +30,22 @@ public class ErrorController {
             return "Error: " + ex.getMessage();
         }
     }
+
+    @ExceptionHandler(HttpClientErrorException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public String handleHttpClientErrorException(HttpClientErrorException ex) {
+        return "Client error: " + ex.getMessage();
+    }
+
+    @ExceptionHandler(HttpServerErrorException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public String handleHttpServerErrorException(HttpServerErrorException ex) {
+        return "Server error: " + ex.getMessage();
+    }
+
+    @ExceptionHandler(Exception.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    public String handleException(Exception ex) {
+        return "Error: " + ex.getMessage();
+    }
 }
