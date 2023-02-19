@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class postService {
+public abstract class postService {
 
     @Autowired
     private PostRepository postRepository;
@@ -18,7 +18,5 @@ public class postService {
         this.postRepository = postRepository;
     }
 
-    public List<Post> getAllPosts(){
-        return postRepository.findAll();
-    }
+    public abstract List<Post> getAllPosts();
 }
