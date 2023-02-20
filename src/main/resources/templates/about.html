@@ -4,30 +4,28 @@
     <title>About us</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <style>
+        h1, h2 {
+            font-family: Arial, sans-serif;
+            color: black;
+        }
+    </style>
 </head>
 <body>
-
-<header th:insert="~{blocks/header :: header}"></header>
-
+<div class="container">
+    <header th:insert="~{blocks/header :: header}"></header>
     <main class="px-3">
-        <h1>ABOUT US</h1>
-        <p class="lead">This is the website-blog of Nurzhanova Zarina
+        <h1 class="text-center" style="font-family: Arial, sans-serif; color: black;">ABOUT US</h1>
+        <p class="lead" style="color: black;">This is the website-blog of Nurzhanova Zarina
             and her team. We are students of IT University
             of Astana in the program of software engineer, 1st year.
             On this site you can read
-            interesting articles and learn many new things. I hope you enjoy it!!!</p>
-        <p class="lead">
-
-        </p>
+            interesting articles and learn many new things. I hope you enjoy it!!! In addition,
+            on this site we will share our experience and knowledge of programming and IT to help other people
+            interested in this field to develop and grow with us. We also look forward to hearing your feedback
+            and suggestions to make this site even better and more useful for our readers.
+            Thank you for choosing our site, and we hope you find a lot of interesting and useful content here.</p>
     </main>
-
 </div>
-<div class="h-100 p-5 text-bg-dark rounded-3">
-    <h2>WE CAN DO IT</h2>
-    <p> If you are working on something
-        exciting that you really care about, you don't have to
-        be pushed. The vision pulls you (Steve Jobs)</p>
-</div>
-
 </body>
 </html>

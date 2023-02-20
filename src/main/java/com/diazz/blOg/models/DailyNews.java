@@ -75,5 +75,4 @@ public class DailyNews {
         this.anons = anons;
         this.full_text = full_text;
     }
-
 }

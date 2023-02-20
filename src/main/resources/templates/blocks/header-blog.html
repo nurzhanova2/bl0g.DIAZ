@@ -5,23 +5,25 @@
     </a>
 
     <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-      <form action="/blog/find" method="post">
-        <input type="text" name="title" placeholder="Enter the title " class="form-controll">
-        <button type="submit">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
-               stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img"
-               viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"></circle><path
-                  d="M21 21l-5.2-5.2"></path></svg>
-        </button>
+      <form action="/blog/find" method="post" class="d-flex ms-auto">
+        <div class="input-group">
+          <input type="text" name="title" placeholder="Search blog..." class="form-control">
+          <button type="submit" class="btn btn-outline-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                 stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img"
+                 viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"></circle><path
+                    d="M21 21l-5.2-5.2"></path></svg>
+          </button>
+        </div>
       </form>
+
       <a class="me-3 py-2 text-dark text-decoration-none" href="/">Main page</a>
       <a class="me-3 py-2 text-dark text-decoration-none" href="/blog">Blog</a>
-      <a class="me-3 py-2 text-dark text-decoration-none" href="/blog/add">Add Article</a>
       <a class="me-3 py-2 text-dark text-decoration-none" href="/dailynews">Daily News</a>
       <a class="me-3 py-2 text-dark text-decoration-none" href="/dailynews/add">Add News</a>
+      <a class="me-3 py-2 text-dark text-decoration-none" href="/blog/add">Add Article</a>
       <a class="me-3 py-2 text-dark text-decoration-none" href="/about">About us</a>
 
     </nav>
   </div>
-
 </div>
