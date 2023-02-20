@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public abstract class postService {
+public abstract class postService implements PostRepository {
 
     @Autowired
     private PostRepository postRepository;
